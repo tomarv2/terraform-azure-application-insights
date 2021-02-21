@@ -1,2 +1,3 @@
-terraform-azure-application-insights
-terraform-azure-storage-queue
+# Azure Application Insights module
+
+Terraform to creates Application Insights.
