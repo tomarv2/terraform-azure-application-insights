@@ -102,7 +102,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azurerm_application_insights.application_insight](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights) | resource |
+| [azurerm_application_insights.application_insights](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights) | resource |
 
 ## Inputs
 
@@ -119,6 +119,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_app_id"></a> [app\_id](#output\_app\_id) | Application Insights Id |
+| <a name="output_connection_string"></a> [connection\_string](#output\_connection\_string) | Application Insights connection string |
 | <a name="output_instrumentation_key"></a> [instrumentation\_key](#output\_instrumentation\_key) | Instrumentation key |
 
 ### References:
