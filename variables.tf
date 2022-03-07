@@ -1,21 +1,25 @@
 variable "teamid" {
   description = "Name of the team/group e.g. devops, dataengineering. Should not be changed after running 'tf apply'"
+  type        = string
 }
 
 variable "prjid" {
   description = "Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply'"
+  type        = string
 }
 
-variable "app_insight_location" {
-  default = "centralus"
+variable "resource_group_name" {
+  description = "Name of the resource group"
+  type        = string
 }
-
-variable "rg_name" {}
 
 variable "application_insight_type" {
-  default = "web"
+  description = "Application Insight type"
+  default     = "web"
+  type        = string
 }
 
-variable "application_insights_depends_on" {
-  default = null
+variable "location" {
+  description = "Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created"
+  type        = string
 }
