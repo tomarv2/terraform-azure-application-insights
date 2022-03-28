@@ -13,9 +13,9 @@
         <img src="https://img.shields.io/twitter/follow/varuntomar2019?style=social&logo=twitter"></a>
 </p>
 
-# Terraform module for Azure Application Insights
+## Terraform module for Azure Application Insights
 
-## Versions
+### Versions
 
 - Module tested for Terraform 1.0.1.
 - Azure provider version [2.98](https://registry.terraform.io/providers/hashicorp/azurerm/latest)
@@ -23,9 +23,9 @@
 - `tags` releases: Tags are pinned with versions (use <a href="https://github.com/tomarv2/terraform-azure-application-insights/tags" alt="GitHub tag">
         <img src="https://img.shields.io/github/v/tag/tomarv2/terraform-azure-application-insights" /></a> in your releases)
 
-## Usage
+### Usage
 
-### Option 1:
+#### Option 1:
 
 ```
 terrafrom init
@@ -35,7 +35,7 @@ terraform destroy -var='teamid=tryme' -var='prjid=project'
 ```
 **Note:** With this option please take care of remote state storage
 
-### Option 2:
+#### Option 2:
 
 #### Recommended method (stores remote state in storage using `prjid` and `teamid` to create directory structure):
 
@@ -72,11 +72,7 @@ tf -c=azure apply -var='teamid=foo' -var='prjid=bar'
 ```
 tf -c=azure destroy -var='teamid=foo' -var='prjid=bar'
 ```
-**NOTE:**
-
-- Read more on [tfremote](https://github.com/tomarv2/tfremote)
----
-
+**Note:** Read more on [tfremote](https://github.com/tomarv2/tfremote)
 Please refer to examples directory [link](examples) for references.
 
 #### Application Insights
