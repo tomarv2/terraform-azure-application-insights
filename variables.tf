@@ -8,18 +8,13 @@ variable "prjid" {
   type        = string
 }
 
-variable "resource_group_name" {
-  description = "Name of the resource group"
-  type        = string
+variable "application_insights_config" {
+  description = "Application insights configuration"
+  default     = null
 }
 
-variable "application_insight_type" {
-  description = "Application Insight type"
-  default     = "web"
-  type        = string
-}
-
-variable "location" {
-  description = "Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created"
-  type        = string
+variable "extra_tags" {
+  description = "Additional tags to associate"
+  type        = map(string)
+  default     = {}
 }
