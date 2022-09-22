@@ -1,8 +1,10 @@
 resource "azurerm_application_insights" "application_insights" {
+  for_each = var.application_insights_config != null ? var.application_insights_config : {}
 
-  name = "${var.teamid}-${var.prjid}"
-
-  resource_group_name = var.resource_group_name
-  location            = var.location
-  application_type    = var.application_insight_type
+  name                = each.key
+  resource_group_name = each.value.resource_group
+  location            = each.value.location
+  application_type    = each.value.application_type
+  tags = merge(var.extra_tags, local.shared_tags)
 }
+

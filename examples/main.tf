@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 1.0.1"
   required_providers {
     azurerm = {
-      version = "~> 2.98"
+      version = "~> 3.21.1"
     }
   }
 }
@@ -11,13 +11,16 @@ provider "azurerm" {
   features {}
 }
 
-module "app_insights" {
+module "application_insights" {
   source = "../"
 
-  resource_group_name = "demo-resource_group"
-  location            = "westus2"
-  #-----------------------------------------------
-  # Note: Do not change teamid and prjid once set.
+  application_insights_config = {
+    "security-dev-security-base" = {
+      resource_group   = "<resource_group_name>"
+      location         = "westus2"
+      application_type = "web"
+    }
+  }
   teamid = var.teamid
   prjid  = var.prjid
 }
