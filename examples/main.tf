@@ -14,13 +14,11 @@ provider "azurerm" {
 module "application_insights" {
   source = "../"
 
-  application_insights_config = {
+  config = {
     "security-dev-security-base" = {
       resource_group   = "<resource_group_name>"
       location         = "westus2"
       application_type = "web"
     }
   }
-  teamid = var.teamid
-  prjid  = var.prjid
 }
